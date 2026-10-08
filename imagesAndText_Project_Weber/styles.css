@@ -1,0 +1,44 @@
+font-family: "Noto Sans Buginese", sans-serif;@charset "utf-8";
+/* Basic reset */
+
+body {
+height: 100%;
+width: 100%;
+overflow: hidden; /* no scrollbars for a clean full-screen look */
+font-family: "Noto Sans Buginese", sans-serif;
+}
+.viewer {
+position: relative; /* important: anchors the absolute-positioned children */
+height: 100vh; /* full viewport height */
+width: 100vw; /* full viewport width */
+}
+/* The image: covers the entire viewer */
+.viewer img {
+position: absolute;
+inset: 0; /* shorthand for top/right/bottom/left: 0 */
+width: 100%;
+height: 100%;
+object-fit: cover; /* fill without distortion; may crop */
+}
+/* The caption: sits at the bottom, readable over the image */
+.viewer .description {
+    position: absolute;
+    left: 140px;
+    top: 70%;
+    font-size: 3rem;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    max-width: 80%;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
